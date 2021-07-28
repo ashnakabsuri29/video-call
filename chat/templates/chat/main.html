@@ -1,0 +1,115 @@
+<!doctype html>
+
+{% load static %}
+
+<html lang="en"></html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Meet up</title>
+    <link rel="stylesheet" href="{% static 'js/css/main.css' %}">
+    <link rel="stylesheet" href="">
+    <link rel="shortcut icon" href="#">
+    <script src="https://kit.fontawesome.com/1d8e01a44a.js" crossorigin="anonymous"></script>
+
+    <style>
+        .video.grid.container {
+            display: grid;
+            grid-template-columns: auto auto;
+            background-color: black;
+        }
+
+        .main-grid-container {
+            display: grid;
+            grid-template-columns: 100% 20%;
+        }
+
+        body {
+            background-color: #CDF0EA;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand mx-3" href="#">Meet up</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-end mx-5" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <p><strong id="time"></strong> • <strong id="date"></strong></p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <div class="main-grid-container ">
+                    <div id="video-container" class="text-center">
+                        <video id="local-video" style="margin-top:10px" poster="{% static 'images/loading.png' %}"
+                            autoplay playsinline></video><br>
+
+                        <div class="my-2">
+                            <!-- <button id="btn-toggle-audio" class="mx-2"><i class="fas fa-microphone"></i></button>
+                            <button id="btn-toggle-video" class="mx-2"><i class="fas fa-video"></i></button> -->
+                            <button type="button" id="btn-toggle-audio" class="btn btn-danger mx-2"><i
+                                    class="fas fa-microphone"></i></button>
+                            <button type="button" id="btn-toggle-video" class="btn btn-danger mx-2"><i
+                                    class="fas fa-video"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+
+
+                <div>
+                    <h5 style="display:inline-block">Username: </h5>
+                    <strong id="label-username"><strong>
+                    <input id="username" placeholder="Enter username"><button type="button" id="btn-join" class="btn btn-primary my-1">Join
+                    room</button>
+                </div>
+
+                <div id="chat" style="margin-top: 15px">
+                    <fieldset>
+                        <legend>
+                            <h5>Chat</h5>
+                        </legend>
+                        <div id="message">
+                            <ul id="message-list"></ul>
+                        </div>
+
+                        <div><input id="msg" placeholder="Type here"><button type="button" id="btn-send-msg"
+                                class="btn btn-primary my-1">Send Message</button></div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
+
+

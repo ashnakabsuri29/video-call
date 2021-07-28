@@ -1,0 +1,11 @@
+.video.grid.container {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: black;
+}
+
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
